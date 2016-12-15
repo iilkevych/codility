@@ -5,9 +5,7 @@ public class PermMissingElem {
 		int result = A.length + 1;
 		for (int i = 0; i < A.length; i++) {
 			result ^= i + 1;
-			if (A[i] <= A.length + 1) {
-				result ^= A[i];
-			}
+			result ^= A[i];
 		}
 		return result;
 	}
