@@ -1,4 +1,4 @@
-package lessons;
+package lessons.l3;
 
 public class FrogJmp {
 	public int solution(int X, int Y, int D) {

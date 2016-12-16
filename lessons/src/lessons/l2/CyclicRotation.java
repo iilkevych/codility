@@ -1,4 +1,4 @@
-package lessons;
+package lessons.l2;
 
 public class CyclicRotation {
 

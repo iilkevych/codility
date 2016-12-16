@@ -1,4 +1,4 @@
-package lessons;
+package lessons.l1;
 
 public class BinaryGap {
 
