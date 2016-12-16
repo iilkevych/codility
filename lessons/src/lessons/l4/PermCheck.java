@@ -1,12 +1,17 @@
 package lessons.l4;
 
 public class PermCheck {
-	int solution(int A[]) {
-		int result = A.length + 1;
+	public int solution(int A[]) {
+		int xor = 0;
+		
 		for (int i = 0; i < A.length; i++) {
-			result ^= i + 1;
-			result ^= A[i];
+			if(A[i] > A.length)
+				return 0;
+			else {
+				xor ^= i + 1;
+				xor ^= A[i];
+			}
 		}
-		return result;
+		return xor == 0? 1:0;
 	}
 }
