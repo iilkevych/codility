@@ -1,17 +1,19 @@
 package lessons.l4;
 
 public class FrogRiverOne {
-	public int solution(int A[]) {
-		int xor = 0;
+	public int solution(int X, int[] A) {
+		int foundCount = X;
+		boolean[] found = new boolean[X + 1];
 		
 		for (int i = 0; i < A.length; i++) {
-			if(A[i] > A.length)
-				return 0;
-			else {
-				xor ^= i + 1;
-				xor ^= A[i];
+			if(!found[A[i]]){
+				found[A[i]] = true;
+				foundCount --;
+			}
+			if(foundCount == 0){
+				return i;
 			}
 		}
-		return xor == 0? 1:0;
+		return -1;
 	}
 }
